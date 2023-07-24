@@ -203,6 +203,13 @@ module Twitter
         end.compact
       end
 
+      # Upload a media
+      # @param media File An image file (PNG, JPEG or GIF).
+      # @retrn [Integer] The media ID
+      def update_media(media)
+        upload(media)[:media_id]
+      end
+
       # Updates the authenticating user's status with media
       #
       # @see https://dev.twitter.com/rest/reference/post/statuses/update_with_media
